@@ -1,0 +1,51 @@
+<div>
+    <div class = "row">
+        <div class = "col-sm-12"><h1>ADD MORAL :</h1></div>
+    </div>
+    <div class = "row">
+        <div class = "col-sm-8"><input [(ngModel)] = "moral" class = "form-control"></div>
+        <div class = "col-sm-4"><button (click)="submitMoral()" class="btn btn-success btn-block">SUBMIT</button></div>
+    </div>
+</div>
+<hr style = "border: 5px solid #03045E; border-radius: 10px;">
+<div>
+    <div class = "row"><div class = "col-sm-12"><h1>MANAGE MORALS :</h1></div></div>
+    <div class = "row"><div class = "col-sm-12"><small>ID : {{editID}}</small></div></div>
+    <hr style = "border: 2px solid #03045E; border-radius: 5px;">
+    <div class = "row"><div class = "col-sm-12"><h4>Select A Moral To Edit / Delete :</h4></div></div>
+    <div class = "row">
+        <div class = "col-sm-12">
+            <button 
+                class='btn btn-secondary mr-1' 
+                *ngFor="let moral of morals" 
+                (click)="onEditSelect(moral)"> 
+                {{moral.payload.doc.data().moral}} 
+            </button>
+        </div>
+    </div>
+    <hr>
+    <div class = "row">
+        <div class = "col-sm-4">
+            <label>Moral :</label>
+            <input [(ngModel)]="editMoral.moral" class = "form-control">
+        </div>
+        <div class = "col-sm-4">
+            <label>Vote :</label>
+            <input [(ngModel)]="editMoral.vote" class = "form-control">
+        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div class = "col-sm-3"><button (click)="onUpdateMoral()"class="btn btn-info btn-block">UPDATE</button></div>
+        <div class = "col-sm-3"> <button (click)="onDeleteMoral()"class="btn btn-danger btn-block">DELETE</button></div>
+    </div>
+</div>
+<hr style = "border: 5px solid #03045E; border-radius: 10px;">
+<div>
+    <div class = "row">
+        <div class = "col-sm-12"><h3>QUICK MANAGE : </h3></div>
+    </div>
+    <div class = "row">
+        <div class = "col-sm-12"><button (click)="onResetAll()" class = "btn btn-warning">RESET ALL</button></div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+h1{
+    color: #03045E;
+    font-size: 50px;
+}
+
+p{
+    color: #023E8A;
+    font-size: x-large;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+    background-image:linear-gradient(to bottom right, #023E8A, #0096C7) !important;
+    border-color: #333;
+    font-size: x-large;
+}
+
+.btn-primary:hover{
+    background-image:linear-gradient(to bottom right, #0096C7, #48CAE4) !important;
+}

@@ -1,0 +1,32 @@
+<div class = "row"><div class = "col-sm-12"><h1>Stats On Class : </h1></div></div>
+
+<div>
+    <div style="display: block">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [chartType]="barChartType"
+              [colors]="chartColors">
+      </canvas>
+    </div>
+</div>
+
+<hr style = "border: 5px solid #03045E; border-radius: 10px;">
+
+<div class = "row">
+    <div class = "col-sm-12">
+        <h3>Data :</h3>
+    </div>
+</div>
+
+<div class = "row">
+    <div class = "col-sm-12">
+        <ul style="list-style: none;">
+            <li *ngFor="let moral of morals">
+                {{moral.payload.doc.data().moral}} : {{moral.payload.doc.data().vote}}
+            </li>
+        </ul>
+    </div>
+</div>
