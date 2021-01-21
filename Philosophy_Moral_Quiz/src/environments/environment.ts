@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyBhKck6ZRGxv5gT-wqW7IBqrlfQ_yRiTCo",
+    apiKey: KEY,
     authDomain: "moral-quiz.firebaseapp.com",
     projectId: "moral-quiz",
     storageBucket: "moral-quiz.appspot.com",
